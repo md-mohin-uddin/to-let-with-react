@@ -1,0 +1,39 @@
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  flex: calc(25% - 42px);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  text-align: justify;
+}
+.post {
+  background-color: lightgray;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.detailsBtn {
+  color: black;
+  background-color: lightcoral;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.detailsBtn:hover {
+  background-color: tomato;
+  color: white;
+}
+.postImage {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

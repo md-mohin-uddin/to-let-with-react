@@ -1,0 +1,22 @@
+nav {
+  height: 10vh;
+  background-color: #282c34;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.image {
+  width: 50px;
+}
+.navLink {
+  color: white;
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-decoration: none;
+}
+.navLink:hover {
+  color: orange;
+}
+nav .active {
+  color: lightgreen;
+}

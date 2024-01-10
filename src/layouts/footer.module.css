@@ -1,0 +1,49 @@
+.footer {
+  background-image: url(../../src/assets/frontend/images/Cover/blog3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.getInTouch {
+  display: flex;
+  justify-content: space-around;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.footerRight {
+  background-color: palevioletred;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+.city {
+  padding: 0 2rem;
+  margin: 0.5rem;
+  text-align: left;
+}
+input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+textarea {
+  padding: 0.2rem 2rem;
+  border-radius: 0.5rem;
+}
+.detailsBtn {
+  color: black;
+  background-color: lightcoral;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.detailsBtn:hover {
+  background-color: tomato;
+  color: white;
+}
