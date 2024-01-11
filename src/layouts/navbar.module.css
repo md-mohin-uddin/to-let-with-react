@@ -20,3 +20,17 @@ nav {
 nav .active {
   color: lightgreen;
 }
+@media screen and (max-width: 600px) {
+  nav {
+    height: 50vh;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navLink {
+    display: flex;
+    flex-direction: column;
+  }
+}

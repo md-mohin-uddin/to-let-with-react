@@ -1,6 +1,7 @@
 .footer {
   background-image: url(../../src/assets/frontend/images/Cover/blog3.jpg);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 50vh;
   display: flex;
@@ -46,4 +47,11 @@ textarea {
 .detailsBtn:hover {
   background-color: tomato;
   color: white;
+}
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
 }

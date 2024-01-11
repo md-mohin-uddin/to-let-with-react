@@ -10,7 +10,7 @@ const Post = () => {
         {blogsData.map((blog) => {
           const { location, district } = blog;
           return (
-            <div className={style.post}>
+            <div className={style.post} key={blog.id}>
               <img className={style.postImage} src={image} alt="" />
               <h4>Location: {location}</h4>
               <div className={style.qmeta}>

@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./footer.module.css";
 
 const Footer = () => {
+  const [state, setState] = useState("");
+
+  const handleChange = (e) => {
+    console.log(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.prevent.default();
+    console.log(e.target.value);
+  };
   return (
     <>
       <div className={styles.footer}>
@@ -24,7 +33,7 @@ const Footer = () => {
         </div>
         <div className={styles.footerRight}>
           <h2>Send Feedback</h2>
-          <form className="form">
+          <form className="form" onSubmit={handleSubmit}>
             <div className={styles.form}>
               <div>
                 <input type="text" placeholder="Your name" />
@@ -42,7 +51,9 @@ const Footer = () => {
                 placeholder="Your message will go here"
               ></textarea>
             </div>
-            <button className={styles.detailsBtn}>Submit</button>
+            <button className={styles.detailsBtn} onClick={handleChange}>
+              Submit
+            </button>
           </form>
         </div>
       </div>

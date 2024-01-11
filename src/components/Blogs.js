@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import { blogsData } from "../data";
 import { Link } from "react-router-dom";
+import { truncateString } from "../utils/utils";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState(blogsData);
-  const truncateString = (str, num) => {
-    if (str.length > num) {
-      return str.slice(0, num) + "...";
-    } else {
-      return str;
-    }
-  };
+
   return (
     <div>
       <h1>Blogs Page</h1>
