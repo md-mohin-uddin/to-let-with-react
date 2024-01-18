@@ -1,28 +1,244 @@
 {
-  "users": [
+  "listings": [
     {
-      "id": "1",
-      "name": "mohin",
-      "email": "mohin@gmail.com",
-      "phone": "018888888"
+      "id": 1,
+      "title": "Cozy Cottage",
+      "description": "A charming cottage with a beautiful garden",
+      "price": 1200,
+      "location": "123 Main Street",
+      "images": [
+        "/images/cozy_cottage_1.jpg",
+        "/images/cozy_cottage_2.jpg",
+        "/images/cozy_cottage_3.jpg"
+      ],
+      "bedrooms": 2,
+      "balcony": 1,
+      "bathrooms": 1,
+      "flatSize": 1200
     },
     {
-      "id": "1",
-      "name": "mohin",
-      "email": "mohin@gmail.com",
-      "phone": "018888888"
+      "id": 2,
+      "title": "Modern Apartment",
+      "description": "Sleek and modern apartment with city views",
+      "price": 2000,
+      "location": "456 Oak Avenue",
+      "images": [
+        "../src/assets/frontend/images/sample/bed (1).jpg",
+        "../src/assets/frontend/images/sample/bed (2).jpg",
+        "/images/modern_apartment_3.jpg"
+      ],
+      "bedrooms": 3,
+      "balcony": 1,
+      "bathrooms": 2,
+      "flatSize": 1800
     },
     {
-      "id": "1",
-      "name": "mohin",
-      "email": "mohin@gmail.com",
-      "phone": "018888888"
+      "id": 3,
+      "title": "Beach House",
+      "description": "Relaxing beachfront house with stunning views",
+      "price": 3000,
+      "location": "789 Palm Beach",
+      "images": [
+        "/images/beach_house_1.jpg",
+        "/images/beach_house_2.jpg",
+        "/images/beach_house_3.jpg"
+      ],
+      "bedrooms": 4,
+      "balcony": 1,
+      "bathrooms": 3,
+      "flatSize": 2500
     },
     {
-      "id": "1",
-      "name": "mohin",
-      "email": "mohin@gmail.com",
-      "phone": "018888888"
+      "id": 4,
+      "title": "Mountain Retreat",
+      "description": "Secluded mountain cabin for nature lovers",
+      "price": 1500,
+      "location": "101 Pine Trail",
+      "images": [
+        "/images/mountain_retreat_1.jpg",
+        "/images/mountain_retreat_2.jpg",
+        "/images/mountain_retreat_3.jpg"
+      ],
+      "bedrooms": 2,
+      "balcony": 1,
+      "bathrooms": 1,
+      "flatSize": 1400
+    },
+    {
+      "id": 5,
+      "title": "Urban Loft",
+      "description": "Trendy loft in the heart of the city",
+      "price": 1800,
+      "location": "202 Downtown Avenue",
+      "images": [
+        "/images/urban_loft_1.jpg",
+        "/images/urban_loft_2.jpg",
+        "/images/urban_loft_3.jpg"
+      ],
+      "bedrooms": 1,
+      "balcony": 1,
+      "bathrooms": 1,
+      "flatSize": 900
+    },
+    {
+      "id": 6,
+      "title": "Family Home",
+      "description": "Spacious home perfect for families",
+      "price": 2500,
+      "location": "303 Oak Street",
+      "images": [
+        "/images/family_home_1.jpg",
+        "/images/family_home_2.jpg",
+        "/images/family_home_3.jpg"
+      ],
+      "bedrooms": 4,
+      "balcony": 1,
+      "bathrooms": 2,
+      "flatSize": 2200
+    },
+    {
+      "id": 7,
+      "title": "Riverside Retreat",
+      "description": "Serene house by the river with a private dock",
+      "price": 2800,
+      "location": "404 River View",
+      "images": [
+        "/images/riverside_retreat_1.jpg",
+        "/images/riverside_retreat_2.jpg",
+        "/images/riverside_retreat_3.jpg"
+      ],
+      "bedrooms": 3,
+      "balcony": 1,
+      "bathrooms": 2,
+      "flatSize": 2000
+    },
+    {
+      "id": 8,
+      "title": "Vintage Charm",
+      "description": "Classic house with vintage decor",
+      "price": 1900,
+      "location": "505 Maple Lane",
+      "images": [
+        "/images/vintage_charm_1.jpg",
+        "/images/vintage_charm_2.jpg",
+        "/images/vintage_charm_3.jpg"
+      ],
+      "bedrooms": 2,
+      "balcony": 1,
+      "bathrooms": 1,
+      "flatSize": 1300
+    },
+    {
+      "id": 9,
+      "title": "Mansion Retreat",
+      "description": "Luxurious mansion with spacious rooms",
+      "price": 5000,
+      "location": "606 Grand Avenue",
+      "images": [
+        "/images/mansion_retreat_1.jpg",
+        "/images/mansion_retreat_2.jpg",
+        "/images/mansion_retreat_3.jpg"
+      ],
+      "bedrooms": 5,
+      "balcony": 1,
+      "bathrooms": 4,
+      "flatSize": 4500
+    },
+    {
+      "id": 10,
+      "title": "Countryside Cabin",
+      "description": "Quaint cabin surrounded by nature",
+      "price": 800,
+      "location": "707 Meadow Lane",
+      "images": [
+        "/images/countryside_cabin_1.jpg",
+        "/images/countryside_cabin_2.jpg",
+        "/images/countryside_cabin_3.jpg"
+      ],
+      "bedrooms": 1,
+      "balcony": 1,
+      "bathrooms": 1,
+      "flatSize": 700
+    },
+    {
+      "id": 11,
+      "title": "City View Penthouse",
+      "description": "Penthouse with breathtaking city views",
+      "price": 3500,
+      "location": "808 Skyline Tower",
+      "images": [
+        "/images/city_view_penthouse_1.jpg",
+        "/images/city_view_penthouse_2.jpg",
+        "/images/city_view_penthouse_3.jpg"
+      ],
+      "bedrooms": 3,
+      "balcony": 1,
+      "bathrooms": 3,
+      "flatSize": 3000
+    },
+    {
+      "id": 12,
+      "title": "Rustic Retreat",
+      "description": "Rustic cabin for a cozy getaway",
+      "price": 1000,
+      "location": "909 Pine Ridge",
+      "images": [
+        "/images/rustic_retreat_1.jpg",
+        "/images/rustic_retreat_2.jpg",
+        "/images/rustic_retreat_3.jpg"
+      ],
+      "bedrooms": 2,
+      "balcony": 1,
+      "bathrooms": 1,
+      "flatSize": 900
+    },
+    {
+      "id": 13,
+      "title": "Garden Villa",
+      "description": "Villa with a beautiful garden setting",
+      "price": 2800,
+      "location": "1010 Blossom Lane",
+      "images": [
+        "/images/garden_villa_1.jpg",
+        "/images/garden_villa_2.jpg",
+        "/images/garden_villa_3.jpg"
+      ],
+      "bedrooms": 4,
+      "balcony": 1,
+      "bathrooms": 3,
+      "flatSize": 2500
+    },
+    {
+      "id": 14,
+      "title": "Lakefront Cabin",
+      "description": "Cabin overlooking a serene lake",
+      "price": 1200,
+      "location": "1111 Lakeside Trail",
+      "images": [
+        "/images/lakefront_cabin_1.jpg",
+        "/images/lakefront_cabin_2.jpg",
+        "/images/lakefront_cabin_3.jpg"
+      ],
+      "bedrooms": 2,
+      "balcony": 1,
+      "bathrooms": 1,
+      "flatSize": 1000
+    },
+    {
+      "id": 15,
+      "title": "Skyscraper View Apartment",
+      "description": "Apartment with stunning skyscraper views",
+      "price": 3000,
+      "location": "1212 Highrise Avenue",
+      "images": [
+        "/images/skyscraper_view_apartment_1.jpg",
+        "/images/skyscraper_view_apartment_2.jpg",
+        "/images/skyscraper_view_apartment_3.jpg"
+      ],
+      "bedrooms": 2,
+      "balcony": 1,
+      "bathrooms": 2,
+      "flatSize": 1800
     }
   ]
 }

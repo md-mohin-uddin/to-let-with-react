@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    let userInfo = {
+      email: email,
+      password: password,
+    };
+    console.log(userInfo);
+    e.preventDefault();
+    // console.log({ email: email, password: password });
+  };
   return (
     <div className="contact_form">
       <div className="container">
@@ -12,26 +30,32 @@ const Login = () => {
                 <h1>Login</h1>
               </div>
 
-              <Form className="text-start">
+              <Form className="text-start" onSubmit={handleSubmit}>
                 <div className="form-group ">
                   <Form.Label for="exampleInputEmail1">
                     Email Or Phone
                   </Form.Label>
-                  <InputGroup type="text" required="">
+                  <InputGroup type="text" required="" onChange={handleEmail}>
                     <Form.Control
                       placeholder="Email Or Phone"
                       aria-label="email"
+                      value={email}
                       aria-describedby="basic-addon1"
                     />
                   </InputGroup>
                 </div>
                 <div className="form-group">
                   <label for="exampleInputEmail1">Password</label>
-                  <InputGroup type="password" placeholder="Password">
+                  <InputGroup
+                    type="password"
+                    placeholder="Password"
+                    onChange={handlePassword}
+                  >
                     {" "}
                     <Form.Control
                       placeholder="Password"
                       aria-label="password"
+                      value={password}
                       aria-describedby="basic-addon1"
                     />
                   </InputGroup>

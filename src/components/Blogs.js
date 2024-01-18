@@ -11,12 +11,12 @@ const Blogs = () => {
       <h1>Blogs Page</h1>
       <section>
         {blogs.map((blog) => {
-          const { id, title, desc } = blog;
+          const { id, desc } = blog;
           return (
             <article key={id}>
-              <h3>{title}</h3>
+              <h3>{id}</h3>
               <p>{truncateString(desc, 100)}</p>
-              <Link to={title}>Learn More </Link>
+              <Link to={id}>Learn More </Link>
             </article>
           );
         })}

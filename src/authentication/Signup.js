@@ -1,7 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const navigate = useNavigate();
+  const handleFullName = (e) => {
+    setFullName(e.target.value);
+  };
+  const handlePhone = (e) => {
+    setPhone(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleConfirmPassword = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    let userInfo = {
+      fullName: fullName,
+      phone: phone,
+      email: email,
+      password: password,
+      confirmPassword: confirmPassword,
+    };
+    console.log(userInfo);
+    e.preventDefault();
+    console.log("clicked");
+  };
+
   return (
     <div className="  logreg center">
       <div className="contact_form_container col-lg-6 container">
@@ -13,6 +49,7 @@ const Signup = () => {
           action="{{ route('register') }}"
           id="contact_form"
           className="m-2 text-start "
+          onSubmit={handleSubmit}
         >
           <div className="form-group">
             <label for="exampleInputEmail1">Full Name </label>
@@ -25,6 +62,8 @@ const Signup = () => {
               <Form.Control
                 placeholder="Full Name"
                 aria-label="Username"
+                onChange={handleFullName}
+                value={fullName}
                 aria-describedby="basic-addon1"
               />
             </InputGroup>
@@ -42,6 +81,8 @@ const Signup = () => {
               <Form.Control
                 placeholder="Phone"
                 aria-label="Phone"
+                onChange={handlePhone}
+                value={phone}
                 aria-describedby="basic-addon1"
               />
             </InputGroup>
@@ -59,6 +100,8 @@ const Signup = () => {
               <Form.Control
                 placeholder="Email"
                 aria-label="Email"
+                onChange={handleEmail}
+                value={email}
                 aria-describedby="basic-addon1"
               />
             </InputGroup>
@@ -76,6 +119,8 @@ const Signup = () => {
               <Form.Control
                 placeholder="password"
                 aria-label="password"
+                onChange={handlePassword}
+                value={password}
                 aria-describedby="basic-addon1"
               />
             </InputGroup>
@@ -93,6 +138,8 @@ const Signup = () => {
               <Form.Control
                 placeholder="Re-type Password"
                 aria-label="password"
+                onChange={handleConfirmPassword}
+                value={confirmPassword}
                 aria-describedby="basic-addon1"
               />
             </InputGroup>

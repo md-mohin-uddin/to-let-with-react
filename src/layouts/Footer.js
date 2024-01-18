@@ -2,14 +2,30 @@ import React, { useState } from "react";
 import styles from "./footer.module.css";
 
 const Footer = () => {
-  const [state, setState] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [text, setText] = useState("");
 
-  const handleChange = (e) => {
-    console.log(e.target.value);
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+  const handleSubjectChange = (e) => {
+    setSubject(e.target.value);
+  };
+  const handleTextChange = (e) => {
+    setText(e.target.value);
   };
   const handleSubmit = (e) => {
-    e.prevent.default();
-    console.log(e.target.value);
+    e.preventdefault();
+    console.log(name, email, phone, subject, text);
   };
   return (
     <>
@@ -36,12 +52,32 @@ const Footer = () => {
           <form className="form" onSubmit={handleSubmit}>
             <div className={styles.form}>
               <div>
-                <input type="text" placeholder="Your name" />
-                <input type="email" placeholder="Email address" />
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  onChange={handleNameChange}
+                  value={name}
+                />
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  onChange={handleEmailChange}
+                  value={email}
+                />
               </div>
               <div>
-                <input type="number" placeholder="Phone no" />
-                <input type="text" placeholder="Subject" />
+                <input
+                  type="number"
+                  placeholder="Phone no"
+                  onChange={handlePhoneChange}
+                  value={phone}
+                />
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  onChange={handleSubjectChange}
+                  value={subject}
+                />
               </div>
             </div>
             <div>
@@ -49,9 +85,11 @@ const Footer = () => {
                 name="text"
                 id=""
                 placeholder="Your message will go here"
+                onChange={handleTextChange}
+                value={text}
               ></textarea>
             </div>
-            <button className={styles.detailsBtn} onClick={handleChange}>
+            <button type="submit" className={styles.detailsBtn}>
               Submit
             </button>
           </form>

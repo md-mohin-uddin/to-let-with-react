@@ -4,11 +4,11 @@ import { blogsData } from "../data";
 import style from "./blog.module.css";
 
 const Blog = () => {
-  const { title } = useParams();
+  const { id } = useParams();
   const [bodyData, setBodyData] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
-    const blogData = blogsData.filter((blog) => blog.title === title);
+    const blogData = blogsData.filter((blog) => blog.id === id);
     setBodyData(blogData[0].desc);
   }, []);
   return (
@@ -21,7 +21,7 @@ const Blog = () => {
         Back to Blogs page
       </button>
       <div className={style.article}>
-        <h1>{title} Page</h1>
+        <h1>{id} Page</h1>
         <p>{bodyData.slice(0, 500)}</p>
         <p>{bodyData.slice(501, 1000)}</p>
       </div>

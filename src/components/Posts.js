@@ -1,7 +1,11 @@
 import React from "react";
 import Post from "./Post";
+import AddPropertyForm from "../authentication/AddPropertyForm";
 
-const Posts = () => {
+const propertyData = (e) => {
+  console.log(e.target.value);
+};
+const Posts = ({ props }) => {
   return (
     <div>
       <h1
@@ -15,7 +19,10 @@ const Posts = () => {
       >
         All Properties
       </h1>
-      <Post />
+
+      {/* Render the Post component */}
+
+      <Post onAddProperty={propertyData} />
     </div>
   );
 };
