@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import style from "./post.module.css";
 import image from "../assets/frontend/images/sample/bed (1).jpg";
 import AddPropertyForm from "../authentication/AddPropertyForm";
-import { v4 as uuidv4 } from "uuid";
 
 const Post = () => {
   const [posts, setPosts] = useState([]);
@@ -24,8 +23,7 @@ const Post = () => {
   }, []);
   // Function to add a new property to the list
   const handleAddProperty = (newProperty) => {
-    const id = uuidv4();
-    setPosts([...posts, newProperty, id]);
+    setPosts([...posts, newProperty]);
   };
   return (
     <div>

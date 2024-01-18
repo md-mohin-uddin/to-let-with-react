@@ -1,6 +1,5 @@
 import React from "react";
 import Post from "./Post";
-import AddPropertyForm from "../authentication/AddPropertyForm";
 
 const propertyData = (e) => {
   console.log(e.target.value);

@@ -1,6 +1,7 @@
 // AddPropertyForm.js
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import { v4 as uuidv4 } from "uuid";
 
 const AddPropertyForm = ({ onAddProperty }) => {
   const [propertyData, setPropertyData] = useState({
@@ -20,8 +21,10 @@ const AddPropertyForm = ({ onAddProperty }) => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    const id = uuidv4();
     setPropertyData({
       ...propertyData,
+      id,
       [name]: type === "checkbox" ? checked : value,
     });
   };
@@ -31,7 +34,7 @@ const AddPropertyForm = ({ onAddProperty }) => {
     // Validate the form data here if needed
 
     // Pass the property data to the parent component
-    onAddProperty({ ...propertyData, id: Date.now() });
+    onAddProperty({ ...propertyData });
 
     // Clear the form after submission
     setPropertyData({
