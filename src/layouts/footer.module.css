@@ -48,10 +48,15 @@ textarea {
   background-color: tomato;
   color: white;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .footer {
     display: flex;
     flex-direction: column;
     height: 100vh;
+  }
+}
+@media screen and (min-width: 767px) {
+  .footer {
+    height: 70vh;
   }
 }
